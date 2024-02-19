@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace CodeChallenge
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             try
             {
                 int result = Divide(10, 0);
+                Console.WriteLine($"the {result}");
             }
             catch (DivideByZeroException ex)
             {
@@ -25,7 +26,7 @@ namespace CodeChallenge
             }
         }
 
-        public static int Divide(int a, int b)
+        public int Divide(int a, int b)
         {
             try
             {
