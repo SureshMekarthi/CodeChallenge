@@ -111,20 +111,57 @@ namespace CodeChallenge
 
     }
 
-    public class CheeseMongersItem
+
+    public class CheeseMongers1
     {
-        public string Name { get; set; }
+        private IList<CheeseMongersItem> _items;
 
-        public int ValidByDays { get; set; }
+        public CheeseMongers1(IList<CheeseMongersItem> items)
+        {
+            _items = items;
+        }
 
-        public int Quality { get; set; }
-    }
+        public void UpdateQuality()
+        {
+            foreach (var item in _items)
+            {
+                if (item.Name == "Ricotta")
+                {
+                    DegradeRicotta(item);
+                    continue;
+                }
 
-    public class RicottaCheese
-    {
-        public string Name { get; set; }
-        public int ValidByDays { get; set; }
-        public int Quality { get; set; }
+
+            }
+        }
+
+        private void DegradeRicotta(CheeseMongersItem ricotta)
+        {
+
+        }
     }
 }
+
+
+public class CheeseMongersItem
+{
+    public string Name { get; set; }
+
+    public int ValidByDays { get; set; }
+
+    public int Quality { get; set; }
+}
+
+//public class RicottaCheese
+//{
+//    public string Name { get; set; }
+//    public int ValidByDays { get; set; }
+//    public int Quality { get; set; }
+//}
+
+public class RicottaChese : CheeseMongersItem
+{
+
+}
+
    
