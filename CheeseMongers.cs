@@ -111,7 +111,7 @@ namespace CodeChallenge
 
     }
 
-
+    //Solution
     public class CheeseMongers1
     {
         private IList<CheeseMongersItem> _items;
@@ -131,13 +131,107 @@ namespace CodeChallenge
                     continue;
                 }
 
+                if (item.Name != "Parmigiano Reginao" && item.Name != "Tasting with chef Massimo")
+                {
+                    UpdateNormalCheese(item);
+                }
+                else
+                {
+                    UpdateSpecialCheese(item);
+                }
+
+                if (item.Name != "Caciocavallo Padolico")
+                {
+                    item.ValidByDays--;
+                }
+
+                if (item.ValidByDays < 0)
+                {
+                    UpdateExpiredCheese(item);
+                }
 
             }
         }
 
         private void DegradeRicotta(CheeseMongersItem ricotta)
         {
+            if (ricotta.Quality > 0)
+            {
+                ricotta.Quality -= 3;
+            }
+            ricotta.ValidByDays--;
+        }
 
+        private void UpdateNormalCheese(CheeseMongersItem normalChese)
+        {
+            if (normalChese.Quality > 0)
+            {
+                normalChese.Quality--;
+            }
+            normalChese.ValidByDays--;
+        }
+
+        private void UpdateSpecialCheese(CheeseMongersItem specialCheese)
+        {
+            if (specialCheese.Quality < 100)
+            {
+                specialCheese.Quality++;
+                if (specialCheese.Name == "Tasting with chef Massimo" && specialCheese.ValidByDays < 15)
+                {
+                    IncreaseQuality(specialCheese, 2);
+                }
+
+                if (specialCheese.ValidByDays < 8)
+                {
+                    IncreaseQuality(specialCheese, 2);
+                }
+            }
+        }
+
+        private void UpdateExpiredCheese(CheeseMongersItem expiredCheese)
+        {
+            if (expiredCheese.Name != "parmigiano Regiano" && expiredCheese.Name != "Tasting with Chef Massimo" && expiredCheese.Quality > 0)
+            {
+                if (expiredCheese.Name != "Caciocavallo Podolico")
+                {
+                    DecreaseQuality(expiredCheese, 4);
+                }
+            }
+            else
+            {
+                ResetQuality(expiredCheese);
+            }
+        }
+
+
+
+        private void IncreaseQuality(CheeseMongersItem item, int value)
+        {
+            if (item.Quality + value <= 100)
+            {
+                item.Quality += value;
+            }
+            else
+            {
+                item.Quality = 100;
+            }
+        }
+
+        private void DecreaseQuality(CheeseMongersItem item, int value)
+        {
+            if (item.Quality - value > 0)
+            {
+                item.Quality -= value;
+            }
+            else
+            {
+                item.Quality = 0;
+            }
+        }
+
+        private void ResetQuality(CheeseMongersItem item)
+        {
+            item.Quality = 0;
         }
     }
 }
@@ -164,4 +258,4 @@ public class RicottaChese : CheeseMongersItem
 
 }
 
-   
+
