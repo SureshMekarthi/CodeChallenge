@@ -26,7 +26,7 @@ namespace CodeChallenge
             }
         }
 
-        public int Divide(int a, int b)
+        public static int Divide(int a, int b)
         {
             try
             {
