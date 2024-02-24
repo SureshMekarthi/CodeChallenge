@@ -8,13 +8,6 @@ namespace CodeChallenge
 {
     internal class FizzBuzz
     {
-        static void Main(string[] args)
-        {
-            int input = 100;
-            FizzBuzzprint(input);
-            Console.ReadLine();
-        }
-
         private static void FizzBuzzprint(int input)
         {
             for (int i = 1; i <= input; i++)
@@ -39,4 +32,4 @@ namespace CodeChallenge
         }
     }
 }
-}
+

@@ -6,33 +6,47 @@ using System.Threading.Tasks;
 
 namespace CodeChallenge
 {
-    internal class TransformedString
+    public static class TransformedString
     {
-        public string Solution(int N)
+        public static string Solution(string input)
         {
-            StringBuilder sb = new StringBuilder();
+            //StringBuilder sb = new StringBuilder();
 
-            if (N == 1)
+            //if (N == 1)
+            //{
+            //    return "a";
+            //}
+
+            //for (int i = 0; i < N; i++)
+            //{
+            //    sb.Append("a");
+            //}
+
+            ////  var numberOfTransformations = N / 2;
+
+            //for (int i = 0; i < sb.Length-1; i++)
+            //{
+            //    if (sb[i] == sb[i + 1])
+            //    {
+            //        sb[i] = (char)(sb[i] + 1);
+            //        sb[i + 1] = ' ';
+            //    }
+            //}
+            //return sb.ToString().Replace(" ", "");
+
+
+            char[] result = input.ToCharArray();
+
+            for (int i = 0; i < result.Length - 1; i++)
             {
-                return "a";
-            }
-
-            for (int i = 0; i < N; i++)
-            {
-                sb.Append("a");
-            }
-
-            //  var numberOfTransformations = N / 2;
-
-            for (int i = 0; i < sb.Length; i++)
-            {
-                if (sb[i] == sb[i + 1])
+                if (result[i] == result[i + 1])
                 {
-                    sb[i] = (char)(sb[i] + 1);
-                    sb[i + 1] = ' ';
+                    result[i] = (char)(result[i] + 1);
+                    result[i + 1] = ' ';
                 }
             }
-            return sb.ToString().Replace(" ", "");
+
+            return new string(result).Replace(" ", "");
         }
     }
 }
