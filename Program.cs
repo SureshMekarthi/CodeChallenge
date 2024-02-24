@@ -11,10 +11,22 @@ namespace CodeChallenge
         static void Main(string[] args)
         {
 
-            int[] tempList = { 10, 20, 30, 40, 50 };
-            int i = 2;
-            tempList[++i] = tempList[i] * 10;
-            Console.WriteLine(string.Join(",", tempList));
+            int favNumber = 3;
+            Cube(ref favNumber);
+            Console.WriteLine(favNumber);
+            Console.ReadLine();
+        }
+
+        static void Cube(ref int favNumber )
+        {
+            favNumber = favNumber * favNumber * favNumber;
+        }
+
+            //int[] tempList = { 10, 20, 30, 40, 50 };
+            //int i = 2;
+            //tempList[++i] = tempList[i] * 10;
+            //Console.WriteLine( string.Join(" ",tempList));
+            //Console.ReadLine();
 
             //ClassA a = new ClassC();
             //Console.WriteLine(a.Welcome());
@@ -40,7 +52,7 @@ namespace CodeChallenge
             //{
             //    Console.WriteLine("Finally block executed");
             //}
-        }
+       // }
 
 
         public class ClassA
