@@ -10,49 +10,63 @@ namespace CodeChallenge
     {
         static void Main(string[] args)
         {
+            int[] tempArray = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            Add50ToSome(tempArray);
 
-            int favNumber = 3;
-            Cube(ref favNumber);
-            Console.WriteLine(favNumber);
+            Console.WriteLine(string.Join(",", tempArray));
             Console.ReadLine();
-        }
 
-        static void Cube(ref int favNumber )
+
+            //int favNumber = 3;
+            //Cube(ref favNumber);
+            //Console.WriteLine(favNumber);
+            //Console.ReadLine();
+        }
+        static void Add50ToSome(int[] localArray)
+        {
+            for (int i = 0; i < localArray.Length; i += 5)
+            {
+                localArray[i] += 50;
+            }
+        }
+        static void Cube(ref int favNumber)
         {
             favNumber = favNumber * favNumber * favNumber;
         }
 
-            //int[] tempList = { 10, 20, 30, 40, 50 };
-            //int i = 2;
-            //tempList[++i] = tempList[i] * 10;
-            //Console.WriteLine( string.Join(" ",tempList));
-            //Console.ReadLine();
-
-            //ClassA a = new ClassC();
-            //Console.WriteLine(a.Welcome());
-            //Console.ReadLine();
 
 
-            //var result = TransformedString.Solution("aaaaaaaaaaa");
+        //int[] tempList = { 10, 20, 30, 40, 50 };
+        //int i = 2;
+        //tempList[++i] = tempList[i] * 10;
+        //Console.WriteLine( string.Join(" ",tempList));
+        //Console.ReadLine();
 
-            //Console.WriteLine(result);
-            //Console.ReadLine();
+        //ClassA a = new ClassC();
+        //Console.WriteLine(a.Welcome());
+        //Console.ReadLine();
 
-            //try
-            //{
-            //    int result = Divide(10, 0);
-            //    Console.WriteLine($"the {result}");
-            //}
-            //catch (DivideByZeroException ex)
-            //{
-            //    Console.WriteLine("Error in try bloc " + ex.Message);
-            //}
 
-            //finally
-            //{
-            //    Console.WriteLine("Finally block executed");
-            //}
-       // }
+        //var result = TransformedString.Solution("aaaaaaaaaaa");
+
+        //Console.WriteLine(result);
+        //Console.ReadLine();
+
+        //try
+        //{
+        //    int result = Divide(10, 0);
+        //    Console.WriteLine($"the {result}");
+        //}
+        //catch (DivideByZeroException ex)
+        //{
+        //    Console.WriteLine("Error in try bloc " + ex.Message);
+        //}
+
+        //finally
+        //{
+        //    Console.WriteLine("Finally block executed");
+        //}
+        // }
 
 
         public class ClassA
