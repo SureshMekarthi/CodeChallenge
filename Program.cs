@@ -10,9 +10,15 @@ namespace CodeChallenge
     {
         static void Main(string[] args)
         {
-          ClassA a = new ClassC();
-            Console.WriteLine(a.Welcome());
-            Console.ReadLine();
+
+            int[] tempList = { 10, 20, 30, 40, 50 };
+            int i = 2;
+            tempList[++i] = tempList[i] * 10;
+            Console.WriteLine(string.Join(",", tempList));
+
+            //ClassA a = new ClassC();
+            //Console.WriteLine(a.Welcome());
+            //Console.ReadLine();
 
 
             //var result = TransformedString.Solution("aaaaaaaaaaa");
