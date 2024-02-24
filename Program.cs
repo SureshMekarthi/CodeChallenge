@@ -10,8 +10,8 @@ namespace CodeChallenge
     {
         static void Main(string[] args)
         {
-          ClassB b = new ClassC();
-            Console.WriteLine(b.Welcome());
+          ClassA a = new ClassC();
+            Console.WriteLine(a.Welcome());
             Console.ReadLine();
 
 
@@ -37,17 +37,17 @@ namespace CodeChallenge
         }
 
 
-        //public class ClassA
-        //{
-        //    public virtual string Welcome()
-        //    {
-        //        return "welcome from ClassA";
-        //    }
-        //}
-
-        public class ClassB 
+        public class ClassA
         {
-            public string Welcome()
+            public virtual string Welcome()
+            {
+                return "welcome from ClassA";
+            }
+        }
+
+        public class ClassB : ClassA
+        {
+            public override string Welcome()
             {
                 return "welcome from class B";
             }
@@ -55,7 +55,7 @@ namespace CodeChallenge
 
         public class ClassC : ClassB
         {
-            public new string Welcome()
+            public override string Welcome()
             {
                 return "welcome from class C";
             }
