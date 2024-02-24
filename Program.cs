@@ -10,11 +10,15 @@ namespace CodeChallenge
     {
         static void Main(string[] args)
         {
-
-            var result = TransformedString.Solution("aaaaaaaaaaa");
-
-            Console.WriteLine(result);
+          ClassB b = new ClassC();
+            Console.WriteLine(b.Welcome());
             Console.ReadLine();
+
+
+            //var result = TransformedString.Solution("aaaaaaaaaaa");
+
+            //Console.WriteLine(result);
+            //Console.ReadLine();
 
             //try
             //{
@@ -32,21 +36,46 @@ namespace CodeChallenge
             //}
         }
 
-        public static int Divide(int a, int b)
+
+        //public class ClassA
+        //{
+        //    public virtual string Welcome()
+        //    {
+        //        return "welcome from ClassA";
+        //    }
+        //}
+
+        public class ClassB 
         {
-            try
+            public string Welcome()
             {
-                return a / b;
+                return "welcome from class B";
             }
-            catch (DivideByZeroException ex)
-            {
-                Console.WriteLine("Error in Divide method:" + ex.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Finally block in divide method executed");
-            }
-            return 0;
         }
+
+        public class ClassC : ClassB
+        {
+            public new string Welcome()
+            {
+                return "welcome from class C";
+            }
+        }
+
+        //public static int Divide(int a, int b)
+        //{
+        //    try
+        //    {
+        //        return a / b;
+        //    }
+        //    catch (DivideByZeroException ex)
+        //    {
+        //        Console.WriteLine("Error in Divide method:" + ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        Console.WriteLine("Finally block in divide method executed");
+        //    }
+        //    return 0;
+        //}
     }
 }
