@@ -10,8 +10,8 @@ namespace CodeChallenge
     {
         static void Main(string[] args)
         {
-                
 
+            PrintHello(4);
 
 
             //var popleCollection = new List<People>
@@ -63,14 +63,14 @@ namespace CodeChallenge
 
         private static void PrintHello(int i)
         {
-            if(i<=50)
+            if(i<=5)
             {
-                Console.WriteLine("$ hello {i}");
+                Console.WriteLine($" hello {i}");
                 PrintHello(i+1); 
             }
             else
             {
-                return;
+                return ;
             }
         }
 
