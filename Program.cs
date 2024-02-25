@@ -8,84 +8,88 @@ namespace CodeChallenge
 {
     public class Program
     {
-        static void Main(string[] args)
-        {
+        ////static void Main(string[] args)
+        ////{
 
-            PrintHello(4);
+        ////    ClassA a = new ClassB();
 
+        ////    Console.WriteLine(a.Welcome());
 
-            //var popleCollection = new List<People>
-            //            {
-            //                new People{ Age=21, Name="Test1"},
-            //                new People{ Name="Test2", Age=22},
-            //                 new People{ Age=23, Name="Test3"},
-            //                new People{ Name="Test4", Age=24},
-            //                new People{ Age=21, Name="Test1"},
-            //                new People{ Name="Test5", Age=22},
-            //                 new People{ Age=23, Name="Test3"},
-            //                new People{ Name="Test6", Age=24},
-            //            };
-
-            //var groupbyCondition = popleCollection.Where(w => w.Age > 20).GroupBy(g => g.Age).ToList();
-
-            //foreach (var person in groupbyCondition)
-            //{
-            //    Console.WriteLine(person.Key);
-
-            //    foreach (var item in person)
-            //    {
-            //         Console.WriteLine($"{item.Name} {item.Age}");
-            //    }
-            //}
+        //    //PrintHello(4);
 
 
-            //int[] tempArray = new int[] { 1, 2, 3, 4, 5, 6, 7 };
-            //Add50ToSome(tempArray);
+        //    //var popleCollection = new List<People>
+        //    //            {
+        //    //                new People{ Age=21, Name="Test1"},
+        //    //                new People{ Name="Test2", Age=22},
+        //    //                 new People{ Age=23, Name="Test3"},
+        //    //                new People{ Name="Test4", Age=24},
+        //    //                new People{ Age=21, Name="Test1"},
+        //    //                new People{ Name="Test5", Age=22},
+        //    //                 new People{ Age=23, Name="Test3"},
+        //    //                new People{ Name="Test6", Age=24},
+        //    //            };
 
-            //int x =10, y =20;
+        //    //var groupbyCondition = popleCollection.Where(w => w.Age > 20).GroupBy(g => g.Age).ToList();
 
-            //while (x++ <= 10)
-            //{
-            //    y = ++y + x;
-            //}
+        //    //foreach (var person in groupbyCondition)
+        //    //{
+        //    //    Console.WriteLine(person.Key);
 
-            //Console.WriteLine("$the value of x: {x}");
-            //Console.WriteLine("$the value of x: {y}");
-
-            Console.ReadLine();
-
-
-            //int favNumber = 3;
-            //Cube(ref favNumber);
-            //Console.WriteLine(favNumber);
-            Console.ReadLine();
-        }
-
-        private static void PrintHello(int i)
-        {
-            if(i<=5)
-            {
-                Console.WriteLine($" hello {i}");
-                PrintHello(i+1); 
-            }
-            else
-            {
-                return ;
-            }
-        }
+        //    //    foreach (var item in person)
+        //    //    {
+        //    //         Console.WriteLine($"{item.Name} {item.Age}");
+        //    //    }
+        //    //}
 
 
-        static void Add50ToSome(int[] localArray)
-        {
-            for (int i = 0; i < localArray.Length; i += 5)
-            {
-                localArray[i] += 50;
-            }
-        }
-        static void Cube(ref int favNumber)
-        {
-            favNumber = favNumber * favNumber * favNumber;
-        }
+        //    //int[] tempArray = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+        //    //Add50ToSome(tempArray);
+
+        //    //int x =10, y =20;
+
+        //    //while (x++ <= 10)
+        //    //{
+        //    //    y = ++y + x;
+        //    //}
+
+        //    //Console.WriteLine("$the value of x: {x}");
+        //    //Console.WriteLine("$the value of x: {y}");
+
+        //    Console.ReadLine();
+
+
+        //    //int favNumber = 3;
+        //    //Cube(ref favNumber);
+        //    //Console.WriteLine(favNumber);
+        //    Console.ReadLine();
+        //}
+
+        //private static void PrintHello(int i)
+        //{
+        //    if(i<=5)
+        //    {
+        //        Console.WriteLine($" hello {i}");
+        //        PrintHello(i+1); 
+        //    }
+        //    else
+        //    {
+        //        return ;
+        //    }
+        //}
+
+
+        //static void Add50ToSome(int[] localArray)
+        //{
+        //    for (int i = 0; i < localArray.Length; i += 5)
+        //    {
+        //        localArray[i] += 50;
+        //    }
+        //}
+        //static void Cube(ref int favNumber)
+        //{
+        //    favNumber = favNumber * favNumber * favNumber;
+        //}
 
 
 
@@ -122,10 +126,19 @@ namespace CodeChallenge
         // }
 
 
-        public class People
+        //public class People
+        //{
+        //    public string Name { get; set; }
+        //    public int Age { get; set; }
+        //}
+
+
+        static void Main(string[] args)
         {
-            public string Name { get; set; }
-            public int Age { get; set; }
+
+            ClassA a = new ClassC();
+
+            Console.WriteLine(a.Welcome());
         }
 
         public class ClassA
