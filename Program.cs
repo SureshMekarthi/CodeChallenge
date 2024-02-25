@@ -10,10 +10,19 @@ namespace CodeChallenge
     {
         static void Main(string[] args)
         {
-            int[] tempArray = new int[] { 1, 2, 3, 4, 5, 6, 7 };
-            Add50ToSome(tempArray);
+            //int[] tempArray = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            //Add50ToSome(tempArray);
 
-            Console.WriteLine(string.Join(",", tempArray));
+            int x =10, y =20;
+
+            while (x++ <= 10)
+            {
+                y = ++y + x;
+            }
+
+            Console.WriteLine("$the value of x: {x}");
+            Console.WriteLine("$the value of x: {y}");
+
             Console.ReadLine();
 
 
