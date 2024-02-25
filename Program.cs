@@ -10,26 +10,33 @@ namespace CodeChallenge
     {
         static void Main(string[] args)
         {
+                
 
-            var popleCollection = new List<People>
-                        {
-                            new People{ Age=21, Name="Test1"},
-                            new People{ Name="Test2", Age=22},
-                             new People{ Age=23, Name="Test3"},
-                            new People{ Name="Test4", Age=24},
-                        };
 
-            var groupbyCondition = popleCollection.Where(w => w.Age > 20).GroupBy(g => g.Age).ToList();
 
-            foreach (var person in groupbyCondition)
-            {
-                Console.WriteLine(person.Key);
+            //var popleCollection = new List<People>
+            //            {
+            //                new People{ Age=21, Name="Test1"},
+            //                new People{ Name="Test2", Age=22},
+            //                 new People{ Age=23, Name="Test3"},
+            //                new People{ Name="Test4", Age=24},
+            //                new People{ Age=21, Name="Test1"},
+            //                new People{ Name="Test5", Age=22},
+            //                 new People{ Age=23, Name="Test3"},
+            //                new People{ Name="Test6", Age=24},
+            //            };
 
-                foreach (var item in person)
-                {
-                     Console.WriteLine($"{item.Name} {item.Age}");
-                }
-            }
+            //var groupbyCondition = popleCollection.Where(w => w.Age > 20).GroupBy(g => g.Age).ToList();
+
+            //foreach (var person in groupbyCondition)
+            //{
+            //    Console.WriteLine(person.Key);
+
+            //    foreach (var item in person)
+            //    {
+            //         Console.WriteLine($"{item.Name} {item.Age}");
+            //    }
+            //}
 
 
             //int[] tempArray = new int[] { 1, 2, 3, 4, 5, 6, 7 };
@@ -52,6 +59,19 @@ namespace CodeChallenge
             //Cube(ref favNumber);
             //Console.WriteLine(favNumber);
             Console.ReadLine();
+        }
+
+        private static void PrintHello(int i)
+        {
+            if(i<=50)
+            {
+                Console.WriteLine("$ hello {i}");
+                PrintHello(i+1); 
+            }
+            else
+            {
+                return;
+            }
         }
 
 
