@@ -10,18 +10,40 @@ namespace CodeChallenge
     {
         static void Main(string[] args)
         {
+
+            var popleCollection = new List<People>
+                        {
+                            new People{ Age=21, Name="Test1"},
+                            new People{ Name="Test2", Age=22},
+                             new People{ Age=23, Name="Test3"},
+                            new People{ Name="Test4", Age=24},
+                        };
+
+            var groupbyCondition = popleCollection.Where(w => w.Age > 20).GroupBy(g => g.Age).ToList();
+
+            foreach (var person in groupbyCondition)
+            {
+                Console.WriteLine(person.Key);
+
+                foreach (var item in person)
+                {
+                     Console.WriteLine($"{item.Name} {item.Age}");
+                }
+            }
+
+
             //int[] tempArray = new int[] { 1, 2, 3, 4, 5, 6, 7 };
             //Add50ToSome(tempArray);
 
-            int x =10, y =20;
+            //int x =10, y =20;
 
-            while (x++ <= 10)
-            {
-                y = ++y + x;
-            }
+            //while (x++ <= 10)
+            //{
+            //    y = ++y + x;
+            //}
 
-            Console.WriteLine("$the value of x: {x}");
-            Console.WriteLine("$the value of x: {y}");
+            //Console.WriteLine("$the value of x: {x}");
+            //Console.WriteLine("$the value of x: {y}");
 
             Console.ReadLine();
 
@@ -29,8 +51,10 @@ namespace CodeChallenge
             //int favNumber = 3;
             //Cube(ref favNumber);
             //Console.WriteLine(favNumber);
-            //Console.ReadLine();
+            Console.ReadLine();
         }
+
+
         static void Add50ToSome(int[] localArray)
         {
             for (int i = 0; i < localArray.Length; i += 5)
@@ -77,6 +101,12 @@ namespace CodeChallenge
         //}
         // }
 
+
+        public class People
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+        }
 
         public class ClassA
         {
